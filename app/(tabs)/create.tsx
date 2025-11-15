@@ -12,7 +12,7 @@ import { Fonts } from '@/constants/theme';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#00AAFF' }}
       headerImage={
         <IconSymbol
           size={310}
@@ -27,7 +27,7 @@ export default function TabTwoScreen() {
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Placeholder Create page
         </ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
