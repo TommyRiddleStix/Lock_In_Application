@@ -133,6 +133,35 @@ const styles = StyleSheet.create({
     color: '#DDDDDD', // text-indigo-600
     borderRadius: 9, // rounded-full
     padding: 5,
+  },
+  trophySelect:{
+    width: 110,
+    height: 140,
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 5,
+	fontSize: 17,
+    backgroundColor: '#333333',
+    color: '#DDDDDD', // text-indigo-600
+    borderRadius: 9, // rounded-full
+    padding: 5,
+  },
+  lockSelect:{
+    width: 110,
+    height: 140,
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 5,
+	fontSize: 17,
+    backgroundColor: '#333333',
+    color: '#DDDDDD', // text-indigo-600
+    borderRadius: 9, // rounded-full
+    padding: 5,
+  },
+  listContainer2: {
+    gap: 20, // Native equivalent of space-y-3
   }
 });
 
