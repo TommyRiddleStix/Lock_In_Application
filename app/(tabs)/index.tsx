@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
+import { useRouter } from 'expo-router'; // 1. IMPORT ROUTER HOOK
 import styles from '../styles/app-styles';
 
 // Reusable Tab Bar Item
 const TabItem = ({ icon, label, isActive }) => (
   <TouchableOpacity 
     style={styles.tabItem}
-    // Friend's future functionality goes here: onPress={() => handleNavigation(label)}
+    // FRIEND'S LOGIC GOES HERE: onPress={() => handleNavigation(label)}
   >
     <Text style={styles.tabIcon}>{icon}</Text>
     <Text style={[styles.tabLabel, isActive ? styles.tabLabelActive : styles.tabLabelInactive]}>
@@ -16,6 +17,18 @@ const TabItem = ({ icon, label, isActive }) => (
 );
 
 const App = () => {
+  const router = useRouter(); // 2. INITIALIZE ROUTER
+
+  // Mock function to generate the assignment name based on the item index
+  const getAssignmentName = (id) => `Assignment Name ${id}`;
+
+  // 3. NAVIGATION HANDLER FUNCTION
+  const handleLockInPress = (assignmentId) => {
+    const name = getAssignmentName(assignmentId);
+    // FIX: Pass the assignment name using URL encoding to handle spaces
+    router.push(`/(screens)/lock-in?id=${assignmentId}&assignmentName=${encodeURIComponent(name)}`);
+  };
+
   return (
     // Main container
     <View style={styles.container}>
@@ -50,10 +63,19 @@ const App = () => {
               </View>
               <View style={styles.itemTextContainer}>
                 {/* Text uses numberOfLines for truncation on mobile */}
-                <Text style={styles.itemTitle} numberOfLines={1}>Assignment name {i}</Text>
+                <Text style={styles.itemTitle} numberOfLines={1}>{getAssignmentName(i)}</Text>
                 <Text style={styles.itemSubtitle} numberOfLines={1}>Due [due date]</Text>
               </View>
-              <Text style={styles.lockInButton}>Lock In</Text>
+              
+              {/* BUTTON WRAPPER: This ensures the text itself is clickable */}
+              <TouchableOpacity 
+                style={{ marginLeft: 16 }}
+                onPress={() => handleLockInPress(i)} // 4. CALL THE HANDLER ON CLICK
+                activeOpacity={0.6}
+              >
+                <Text style={styles.lockInButton}>Lock In</Text>
+              </TouchableOpacity>
+              
             </TouchableOpacity>
           ))}
         </View>
