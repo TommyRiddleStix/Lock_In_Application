@@ -134,6 +134,63 @@ const styles = StyleSheet.create({
     borderRadius: 9, // rounded-full
     padding: 5,
   },
+  
+  
+  
+  //below are the  styles for the lock in file
+  container_li: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: '#1F2937', // Dark background
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  statusText_li: { //NEW STYLE FOR STATUS
+    fontSize: 44,
+    fontWeight: 'bold',
+    color: '#AAAAAA', // Green color for positive confirmation
+    marginBottom: 60,
+    letterSpacing: 2,
+  },
+  timerText_li: {
+    fontSize: 72,
+    fontWeight: '900',
+    color: '#ECF0F1', // Light gray/white text
+    marginBottom: 10,
+  },
+  assignmentNameText_li: { 
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#9CA3AF', // Gray subtitle
+    marginBottom: 30, // Increased margin for separation
+    textAlign: 'center',
+  },
+  assignmentIdText_li: {
+    fontSize: 14,
+    color: '#4B5563', // Very dark gray, low contrast
+    position: 'absolute',
+    bottom: 10,
+    opacity: 0.5,
+  },
+  exitButton_li: {
+    marginTop: 60,
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 10,
+    backgroundColor: '#FFFFFF', // Red color for exit action
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 8,
+  },
+  exitButtonText_li: {
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 22,
+  },
+  
+  //below are the achievement page styles
   trophySelect:{
     width: 110,
     height: 140,
@@ -165,4 +222,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default styles; // <-- THE EXPORT MAGIC!
+export default styles;
