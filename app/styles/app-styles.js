@@ -205,8 +205,8 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   lockSelect:{
-    width: 110,
-    height: 140,
+    width: 165,
+    height: 230,
     flexDirection: 'column',
     alignItems: 'center',
     paddingVertical: 8,
@@ -217,8 +217,11 @@ const styles = StyleSheet.create({
     borderRadius: 9, // rounded-full
     padding: 5,
   },
+  achievementText:{
+
+  },
   listContainer2: {
-    gap: 20, // Native equivalent of space-y-3
+    gap: 30, // Native equivalent of space-y-3
   }
 });
 

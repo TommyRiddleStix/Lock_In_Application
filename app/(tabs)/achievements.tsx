@@ -37,12 +37,12 @@ const App = () => {
       
 
       <View style={styles.listContainer2}>
-          {[1, 2, 3, 4].map(i => (
+          {[1, 2, 3, 4].map((i, index1) => (
             // List Item uses TouchableOpacity for interactive feedback
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-              {[1, 2, 3].map(j => (
-              <View style = {styles.lockSelect}>
-                <Text>Acheivement</Text>
+            <View key={index1} style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              {[1, 2].map((j, index2) => (
+              <View key={index2} style = {styles.lockSelect}>
+                <Text style={styles.lockSelect}>Acheivement</Text>
                 <Text>{++count}</Text>
                 
               </View>
