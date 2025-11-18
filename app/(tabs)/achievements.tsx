@@ -42,8 +42,8 @@ const App = () => {
             <View key={index1} style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
               {[1, 2].map((j, index2) => (
               <View key={index2} style = {styles.lockSelect}>
-                <Text style={styles.lockSelect}>Acheivement</Text>
-                <Text>{++count}</Text>
+                <Text style={styles.achievementText}>Acheivement</Text>
+                <Text style={styles.achievementText}>{++count}</Text>
                 
               </View>
               ))}

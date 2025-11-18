@@ -212,13 +212,19 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 5,
 	fontSize: 17,
-    backgroundColor: '#333333',
-    color: '#DDDDDD', // text-indigo-600
+    backgroundColor: '#EEEEEE',
     borderRadius: 9, // rounded-full
     padding: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 16, height: 16 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   achievementText:{
-
+    fontSize: 25,
+    alignItems: 'center',
+    flexDirection: 'column',
+    color: '#24252C',
   },
   listContainer2: {
     gap: 30, // Native equivalent of space-y-3
