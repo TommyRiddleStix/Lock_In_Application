@@ -2,6 +2,32 @@ import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import styles from '../styles/app-styles';
 
+function trophy({index}, {number}, {isUnlocked}, {message}){
+  if(isUnlocked){
+    return(
+    <>
+      <View key={index} style = {styles.lockSelect}>
+        <Text style={styles.achievementText}>Acheivement</Text>
+        <Text style={styles.achievementText}>{number}}</Text>
+        <Text style={{ fontSize: 120 }}>🏆</Text>
+      </View>
+    </>
+    );
+  }
+  else{
+    return(
+    <>
+      <View key={index} style = {styles.lockSelect}>
+        <Text style={styles.achievementText}>Acheivement</Text>
+        <Text style={styles.achievementText}>{number}</Text>
+        <Text style={{ fontSize: 120 }}>🔒</Text>
+      </View>
+    </>
+    );
+  }
+}
+
+
 // Reusable Tab Bar Item
 const TabItem = ({ icon, label, isActive }) => (
   <TouchableOpacity 
@@ -44,7 +70,7 @@ const App = () => {
               <View key={index2} style = {styles.lockSelect}>
                 <Text style={styles.achievementText}>Acheivement</Text>
                 <Text style={styles.achievementText}>{++count}</Text>
-                
+                <Text style={{ fontSize: 120 }}>🔒</Text>
               </View>
               ))}
             </View>
