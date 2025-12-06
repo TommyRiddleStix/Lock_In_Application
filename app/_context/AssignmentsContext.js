@@ -6,7 +6,6 @@ export const AssignmentsProvider = ({ children }) => {
   const [assignments, setAssignments] = useState([
   ]);
 
-  // Updated to accept icon
   const addAssignment = (name, dueDate, length, priority, icon) => {
     const newAssignment = {
       id: Date.now(),
@@ -14,7 +13,7 @@ export const AssignmentsProvider = ({ children }) => {
       dueDate: dueDate instanceof Date ? dueDate.toDateString() : dueDate,
       length,
       priority,
-      icon: icon || '💼', // Fallback to briefcase if empty
+      icon: icon || '💼', //Default icon
     };
     setAssignments((prev) => [...prev, newAssignment]);
   };

@@ -4,7 +4,6 @@ import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-// 💥 FIX: Import from the new '_context' folder so Expo doesn't treat it as a route
 import { AssignmentsProvider } from './_context/AssignmentsContext.js';
 
 export const unstable_settings = {
@@ -15,7 +14,6 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    // Wrap EVERYTHING in the AssignmentsProvider
     <AssignmentsProvider>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack screenOptions={{ headerShown: false }}> 

@@ -36,7 +36,7 @@ const App = () => {
     return `Due in ${diffDays} days`;
   };
 
-  // 💥 COLOR LOGIC: Determine color based on Priority + Length
+//Color logic
   const getAssignmentColors = (priority, length) => {
     const pMap = { low: 1, medium: 2, high: 3 };
     const lMap = { short: 1, medium: 2, long: 3 };
@@ -96,7 +96,6 @@ const App = () => {
                 activeOpacity={0.8}
               >
                 <View style={styles.itemIcon}>
-                  {/* 💥 NEW: Display dynamic icon from assignment object */}
                   <Text style={{ fontSize: 20 }}>{assignment.icon || '💼'}</Text>
                 </View>
                 <View style={styles.itemTextContainer}>
