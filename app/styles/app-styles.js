@@ -3,13 +3,13 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    maxWidth: 400, // Simulates max-w-lg containment
-    alignSelf: 'center', // Simulates mx-auto to center content
-    backgroundColor: '#F9FAFB', // bg-gray-50
+    maxWidth: 400,
+    alignSelf: 'center',
+    backgroundColor: '#F9FAFB',
     width: '100%',
   },
   header: {
-    backgroundColor: '#4F46E5', // bg-indigo-600
+    backgroundColor: '#4F46E5',
     paddingTop: 40,
     paddingBottom: 16,
     paddingHorizontal: 24,
@@ -23,49 +23,48 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   headerSubtitle: {
-    color: '#A5B4FC', // text-indigo-200
+    color: '#A5B4FC',
     fontSize: 14,
   },
   profileButton: {
     width: 40,
     height: 40,
     backgroundColor: '#FFFFFF',
-    borderRadius: 9999, // rounded-full
+    borderRadius: 9999,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // Main Content
   scrollArea: {
     flex: 1,
     padding: 16,
     paddingTop: 16,
   },
   sectionTitle: {
-    color: '#1F2937', // text-gray-800
+    color: '#1F2937',
     fontSize: 18,
     fontWeight: 'bold',
     paddingHorizontal: 8,
     marginBottom: 12,
   },
   listContainer: {
-    gap: 12, // Native equivalent of space-y-3
+    gap: 12,
   },
   listItem: {
     backgroundColor: '#FFFFFF',
     padding: 16,
-    borderRadius: 12, // rounded-xl
+    borderRadius: 12,
     flexDirection: 'row',
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 3,
-    elevation: 3, // Android shadow
+    elevation: 3,
   },
   itemIcon: {
     width: 48,
     height: 48,
-    backgroundColor: '#E5E7EB', // bg-gray-200
+    backgroundColor: '#E5E7EB',
     borderRadius: 9999,
     marginRight: 12,
     alignItems: 'center',
@@ -82,28 +81,27 @@ const styles = StyleSheet.create({
   },
   itemSubtitle: {
     fontSize: 14,
-    color: '#6B7280', // text-gray-500
+    color: '#6B7280',
   },
   itemViewButton: {
     fontSize: 14,
-    color: '#4F46E5', // text-indigo-600
+    color: '#4F46E5',
     marginLeft: 16,
     flexShrink: 0,
   },
   bottomSpacer: {
-    height: 64, // h-16
+    height: 64,
   },
-  // Bottom Navigation
   tabBar: {
     flexDirection: 'row',
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1,
-    borderTopColor: '#E5E7EB', // border-t border-gray-200
+    borderTopColor: '#E5E7EB',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: -4 },
     shadowOpacity: 0.1,
     shadowRadius: 6,
-    elevation: 10, // shadow-xl equivalent
+    elevation: 10,
   },
   tabItem: {
     flex: 1,
@@ -119,55 +117,105 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   tabLabelActive: {
-    color: '#4F46E5', // text-indigo-600
+    color: '#4F46E5',
   },
   tabLabelInactive: {
-    color: '#6B7280', // text-gray-500
+    color: '#6B7280',
   },
   lockInButton: {
     flexDirection: 'column',
     alignItems: 'center',
     paddingVertical: 8,
-	fontSize: 24,
+    fontSize: 24,
     backgroundColor: '#333333',
-    color: '#DDDDDD', // text-indigo-600
-    borderRadius: 9, // rounded-full
+    color: '#DDDDDD',
+    borderRadius: 9,
     padding: 5,
   },
-  
-  
-  
-  //below are the  styles for the lock in file
+  formContainer: {
+    marginTop: 20,
+    padding: 16,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#374151',
+    marginBottom: 8,
+  },
+  input: {
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#D1D5DB',
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 16,
+    marginBottom: 20,
+    color: '#1F2937',
+  },
+  inputButton: {
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#D1D5DB',
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 20,
+    justifyContent: 'center',
+  },
+  inputText: {
+    fontSize: 16,
+    color: '#1F2937',
+  },
+  inputPlaceholder: {
+    fontSize: 16,
+    color: '#9CA3AF',
+  },
+  createButton: {
+    backgroundColor: '#4F46E5',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 20,
+    shadowColor: '#4F46E5',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 4,
+  },
+  createButtonText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
   container_li: {
     flex: 1,
     padding: 24,
-    backgroundColor: '#1F2937', // Dark background
+    backgroundColor: '#1F2937',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  statusText_li: { //NEW STYLE FOR STATUS
+  statusText_li: {
     fontSize: 44,
     fontWeight: 'bold',
-    color: '#AAAAAA', // Green color for positive confirmation
+    color: '#AAAAAA',
     marginBottom: 60,
     letterSpacing: 2,
   },
   timerText_li: {
     fontSize: 72,
     fontWeight: '900',
-    color: '#ECF0F1', // Light gray/white text
+    color: '#ECF0F1',
     marginBottom: 10,
   },
-  assignmentNameText_li: { 
+  assignmentNameText_li: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#9CA3AF', // Gray subtitle
-    marginBottom: 30, // Increased margin for separation
+    color: '#9CA3AF',
+    marginBottom: 30,
     textAlign: 'center',
   },
   assignmentIdText_li: {
     fontSize: 14,
-    color: '#4B5563', // Very dark gray, low contrast
+    color: '#4B5563',
     position: 'absolute',
     bottom: 10,
     opacity: 0.5,
@@ -177,7 +225,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 10,
-    backgroundColor: '#FFFFFF', // Red color for exit action
+    backgroundColor: '#FFFFFF',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
@@ -189,8 +237,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 22,
   },
-  
-  //below are the achievement page styles
   trophySelect:{
     width: 110,
     height: 140,
@@ -198,27 +244,67 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 8,
     paddingHorizontal: 5,
-	fontSize: 17,
+    fontSize: 17,
     backgroundColor: '#333333',
-    color: '#DDDDDD', // text-indigo-600
-    borderRadius: 9, // rounded-full
+    color: '#DDDDDD',
+    borderRadius: 9,
     padding: 5,
   },
   lockSelect:{
-    width: 110,
-    height: 140,
+    width: 165,
+    height: 230,
     flexDirection: 'column',
     alignItems: 'center',
     paddingVertical: 8,
     paddingHorizontal: 5,
-	fontSize: 17,
-    backgroundColor: '#333333',
-    color: '#DDDDDD', // text-indigo-600
-    borderRadius: 9, // rounded-full
+    fontSize: 17,
+    backgroundColor: '#EEEEEE',
+    borderRadius: 9,
     padding: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 16, height: 16 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  achievementText:{
+    fontSize: 25,
+    alignItems: 'center',
+    flexDirection: 'column',
+    color: '#24252C',
   },
   listContainer2: {
-    gap: 20, // Native equivalent of space-y-3
+    gap: 30,
+  },
+  // --- NEW SELECTION BUTTON STYLES ---
+  selectionRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+    gap: 8,
+  },
+  optionButton: {
+    flex: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    borderWidth: 1,
+    borderColor: '#D1D5DB',
+    borderRadius: 8,
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+  },
+  optionButtonActive: {
+    backgroundColor: '#4F46E5',
+    borderColor: '#4F46E5',
+  },
+  optionText: {
+    fontSize: 14,
+    color: '#374151',
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+  optionTextActive: {
+    color: '#FFFFFF',
+    fontWeight: '700',
   }
 });
 
