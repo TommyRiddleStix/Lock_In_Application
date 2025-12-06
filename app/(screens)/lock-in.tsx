@@ -20,19 +20,19 @@ export default function LockInScreen() {
     if (timeLeft <= 0) {
       console.log('Focus Session Complete! Navigating home.');
       
-      // Automatically navigate back to the previous screen (dashboard)
+      // Automatically navigate back to the previous screen
       router.back(); 
-      return; // Stop the function here
+      return;
     }
 
-    // Set up the interval to decrement time every second
+    // Set up the interval to go down onee time every second
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => prevTime - 1);
     }, 1000);
 
     // Clear interval on cleanup
     return () => clearInterval(timer);
-  }, [timeLeft, router]); //Dependency array includes timeLeft and router
+  }, [timeLeft, router]);
 
   // Format time (e.g., 30:00)
   const formatTime = (totalSeconds) => {
